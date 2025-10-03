@@ -1,6 +1,3 @@
-from os import remove
-from string import whitespace
-
 import pytest
 from string_utils import StringUtils
 
@@ -26,7 +23,7 @@ def test_capitalize_negative(input_text, result):
 
 @pytest.mark.parametrize("input_text, result", [
     ("   skypro", "skypro"),
-        (" fort", "fort")
+    (" fort", "fort")
 ])
 def test_trim(input_text, result):
     assert util.trim(input_text) == result
@@ -47,7 +44,6 @@ def test_contains_positive(word, symbol):
 # def test_contains_negative(word, symbol):              У меня получилось 2 варианта решения, т.к. здесь выдает ошибку
 #     with pytest.raises(AssertionError):                какой из них более корректный - сказать что ошибка должна быть
 #         assert util.contains(word, symbol)             или поставить маркер ошибки?
-
 @pytest.mark.xfail
 def test_contains_negative(word, symbol):
     assert util.contains(word, symbol)
@@ -60,6 +56,7 @@ def test_contains_negative(word, symbol):
 ])
 def test_delete_symbol_positive(word, letter):
     assert util.delete_symbol(word, letter)
+
 
 @pytest.mark.parametrize("word, letter", [
     ("Socks", "u"),
