@@ -6,10 +6,10 @@ class ShopOrder:
     def __init__(self, driver):
         self.browser = driver
 
-    def input_data(self):
-        self.browser.find_element(By.ID, "first-name").send_keys("Daniil")
-        self.browser.find_element(By.ID, "last-name").send_keys("Prokopev")
-        self.browser.find_element(By.ID, "postal-code").send_keys("625046")
+    def input_data(self, user_data: dict):
+        self.browser.find_element(By.ID, "first-name").send_keys(user_data["name"])
+        self.browser.find_element(By.ID, "last-name").send_keys(user_data["last-name"])
+        self.browser.find_element(By.ID, "postal-code").send_keys(user_data["postal-code"])
 
     def button(self):
         self.browser.find_element(By.ID, "continue").click()

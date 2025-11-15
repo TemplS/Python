@@ -16,7 +16,10 @@ def test_shop():
     auth.button()
 
     main = ShopMainPage(driver)
-    main.add_product()
+    locators = ["add-to-cart-sauce-labs-backpack",
+                "add-to-cart-sauce-labs-bolt-t-shirt",
+                "add-to-cart-sauce-labs-onesie"]
+    main.add_product(locators)
     main.button()
 
     cart = ShopCart(driver)
@@ -24,7 +27,8 @@ def test_shop():
     cart.button()
 
     order = ShopOrder(driver)
-    order.input_data()
+    user_data = {"name": "Daniil", "last-name": "Prokopev", "postal-code": "625046"}
+    order.input_data(user_data)
     order.button()
     x = order.price()
 

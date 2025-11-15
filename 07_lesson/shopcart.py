@@ -9,10 +9,10 @@ class ShopCart:
     def check_cart(self):
         names = self.browser.find_elements(
             By.CSS_SELECTOR, ".inventory_item_name")
-        name1 = names[0]
-        name2 = names[1]
-        name3 = names[2]
-        print(name1.text, " ", name2.text, " ", name3.text)
+        shopping_list = []
+        for name in names:
+            shopping_list.append(name.text)
+        assert shopping_list == ["Sauce Labs Backpack", "Sauce Labs Bolt T-Shirt", "Sauce Labs Onesie"]
 
     def button(self):
         self.browser.find_element(By.ID, "checkout").click()

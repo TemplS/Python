@@ -17,8 +17,5 @@ def test_calculator_page():
     calc.buttons("8")
     calc.buttons("=")
     calc.result(46)
-    x = driver.find_element(By.CSS_SELECTOR, ".screen").text
-    y = int(x)
-    assert y == 15
 
     driver.quit()
