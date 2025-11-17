@@ -4,7 +4,7 @@ from change_projects import Change_Project
 from get_project import Get_project
 
 
-base_url =
+base_url = "https://ru.yougile.com/api-v2/projects"
 key =
 worker_id =
 
