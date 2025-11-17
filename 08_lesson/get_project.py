@@ -9,10 +9,12 @@ class Get_project:
 
     def test_positive_get_project(self, project_id):
         my_headers = {'Authorization': f'Bearer {self.key}'}
-        req = requests.get(self.base_url + f'/{project_id}', headers=my_headers)
+        req = requests.get(self.base_url + f'/{project_id}',
+                           headers=my_headers)
         assert req.status_code == 200
 
     def test_negative_get_project(self, project_id):
         my_headers = {'Authorization': f'Bearer {self.key}'}
-        req = requests.post(self.base_url + f'/{project_id}', headers=my_headers)
+        req = requests.post(self.base_url + f'/{project_id}',
+                            headers=my_headers)
         assert req.status_code == 404

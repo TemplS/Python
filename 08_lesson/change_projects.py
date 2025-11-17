@@ -12,7 +12,8 @@ class Change_Project:
         body = {
             "title": f"{title}"
         }
-        req = requests.put(self.base_url+f'/{project_id}', headers=my_headers, json=body)
+        req = requests.put(self.base_url+f'/{project_id}',
+                           headers=my_headers, json=body)
         assert req.status_code == 200
 
     def test_negative_change_project(self, title):
