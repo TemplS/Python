@@ -4,9 +4,9 @@ from change_projects import Change_Project
 from get_project import Get_project
 
 
-base_url = "https://ru.yougile.com/api-v2/projects"
-key = "7rlt2NYhTSGX8WUZy6dUCCaYdD13UMYuLfIe05mWBupbNz+fm7-F9JKcurJf7+As"
-worker_id = "5e5da754-d310-4082-a1b0-095b8cb5cf46"
+base_url =
+key =
+worker_id =
 
 def test_yougile():
     create = Create_Project(key,base_url)
